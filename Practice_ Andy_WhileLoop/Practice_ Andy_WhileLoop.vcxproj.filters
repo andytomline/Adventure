@@ -24,6 +24,9 @@
     <ClCompile Include="Path1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="goblinCamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassManager.h">
@@ -43,6 +46,9 @@
     </ClInclude>
     <ClInclude Include="Path1.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="goblinCamp.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -9,8 +9,7 @@
 #include "Goblin_Enemies.h"
 //#include "Variables.h"
 #include "Path1.h"
-
-
+#include "goblinCamp.h"
 
 using namespace std;
 
@@ -394,6 +393,8 @@ int main()
 
     
     Path1(m_Player);
+
+	goblinCamp(m_Player);
 
     
     cout << "Back to main." << endl;
