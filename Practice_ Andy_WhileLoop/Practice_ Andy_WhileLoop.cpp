@@ -56,6 +56,19 @@ int main()
 
     cout << "Welcome " << NAME << " to the World of Dragons, Mages, and Adventurers!" << endl;
     Sleep(2500); // Given more time for longer sentences
+
+	cout << "And how old are you? Please not that players over 80 cannot play due to ageism." << endl;
+	cin >> AGE;
+	if (AGE >= 80) // Age check
+	{
+		cout << "You are too old, lady. Go watch a soap and eat cake." << endl; 
+		exit(1000); // Forces the program to close
+	}
+
+	cout << "Alright " << NAME << ", so you are " << AGE << " years old. Cool." << endl;
+
+	Sleep(3000);
+
     cout << "Prepare yourself... \nBut first I need to know more about who you are." << endl;
     Sleep(2500);
     cout << "What is your Race? \n1. Human \n2. Elf \n3. Goblin \n4. Merfolk?" << endl; // Inputting numbers instead of class names to avoid confusion
@@ -109,17 +122,7 @@ int main()
 
     Sleep(4000);
 
-    cout << "And how old are you? Please not that players over 80 cannot play due to ageism." << endl;
-    cin >> AGE;
-
-    /*if (AGE <= 80) ------- Code not needed yet, will probably remove.
-    {
-        cout << "Well done" << endl;
-    }*/
-
-    cout << "Alright " << NAME << ", so you are " << AGE << " years old. Cool." << endl;
-
-    Sleep(3000);
+ 
 
     cout << "Last choice then.\nYour class: \n1. Druid.\n2. Warrior.\n3. Wizard." << endl; // Edited so that it reads better, adding spaces and correcting little errors.
     cin >> CLASS;
@@ -254,8 +257,9 @@ int main()
         break;
     }
 
-    default: // ----- Need to add an exit or repeat feature. -----
+    default: 
         cout << "Bad input detected. Quitting to save the universe. Praise Google." << endl;
+		exit(1000);
 
         break;
 
@@ -387,7 +391,8 @@ int main()
       }
       default:
       {
-          cout << "You idiot. How dare you. I am broken." << endl; //Needs to loop or exit.
+          cout << "You idiot. How dare you. I am broken." << endl; 
+		  exit(1000);
       }
     }
 

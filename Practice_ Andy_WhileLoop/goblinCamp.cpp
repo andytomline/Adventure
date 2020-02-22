@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include "Player.h"
 #include "goblinCamp.h"
+#include <stdlib.h>
 
 
 using namespace std;
@@ -58,5 +59,12 @@ void goblinCamp(Player& m_Player)
 
 
 		}
+
+	default:
+	{
+		cout << "What are you doing to me!? Whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy Okay I'm over it and I am out. Peace. #" << endl;
+		exit(1000);
 	}
+	}
+	
 }
