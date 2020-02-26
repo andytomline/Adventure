@@ -63,8 +63,61 @@ void goblinCamp(Player& m_Player)
 	default:
 	{
 		cout << "What are you doing to me!? Whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy Okay I'm over it and I am out. Peace. #" << endl;
-		exit(1000);
+		exit(3000);
 	}
 	}
 	
+	cout << "After your first attempt, you notice that the Goblins are now angry.\nOh boy.\n" << endl;
+	cout << "1. When in doubt, attack the incoming Goblins with your sword.\n2. You think that you may be able to scare the others off. Attack the Goblins with a minor spell.\n3. No time to think! Attack the Goblins with a powerful spell.\n4. Peace is always an option. Try to reason with the Goblins." << endl;
+	int Choice4;
+	cin >> Choice4;
+
+	switch (Choice4)
+	{
+		case 1:
+		{
+			m_Player.Current_HP--;
+			cout << "You raise your sword, but as you do, a Goblin lands a hit.\nYour health is now: " << m_Player.Current_HP << "." << endl;
+			cout << "However. you swing your sword and slay the goblin dead." << endl;
+			cout << "You realise there's more than just one...\n1. Swing your sword at another.\n2. Try a spell, see how many that can take out.\n3. Run." << endl;
+			cin >> Choice4;
+			switch (Choice4)
+			{
+				case 1:
+				{
+					cout << "Again, you swing your sword. You slash a Goblin on the spot, and another. Finally, the others see the threat and run." << endl;
+				}
+				case 2:
+
+				if (m_Player.mana >= 1)
+				{
+					m_Player.mana--;
+					cout << "You mutter words, and your hands fly forward bringing a crackling wave of energy from them.\nThe Goblins ahead are fried on the spot, the remaining ones flee." << endl;
+					cout << "Your remaining mana is now: " << m_Player.mana << "." << endl;
+				}
+				else
+				{
+					cout << "A puff of nothing. Whoops. Must have no juice in the tank, matey.\nThe Goblins do enjoy you as a nice lunch though." << endl;
+					exit(3000);
+				}
+				case 3: 
+				{
+					cout << "You run away. Yeah life is cool. But you know that the Goblins are out there.\nYou drink some tea. It's nice.\nBut you are forever a coward.\nThe end." << endl;
+					exit(6000);
+				}
+				default:
+				{
+					cout << "You are wrong." << endl;
+					exit(2000);
+				}
+			}
+	}
+
+
+
+
+
+
+	}
+
 }
