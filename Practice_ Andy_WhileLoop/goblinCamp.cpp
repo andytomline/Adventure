@@ -142,7 +142,7 @@ void goblinCamp(Player& m_Player)
 		case 4:
 		{
 			cout << "You try to talk to the sword sticking out of the door.\nIt seems to go well at first..." << endl;
-			if (m_Player.goblinRace = 1)
+			if (m_Player.goblinRace == 1)
 			{
 				cout << "Being a Goblin, they seems understand your plea. They let you in, and you are free to look around." << endl;
 			}
