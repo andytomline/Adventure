@@ -17,6 +17,10 @@ public:
 	int l;
 	int c;
 	bool goblinRace; //Yes = 1
+	bool Bork;
+	bool Wizard;
+	bool Warrior;
+	bool Druid;
 
 	Player() 
 	{
@@ -31,7 +35,10 @@ public:
 		l = 1;
 		c = 1;
 		goblinRace = 0;
-
+		Bork = 0;
+		Wizard = 0;
+		Warrior = 0;
+		Druid = 0;
 	}
 	
 };

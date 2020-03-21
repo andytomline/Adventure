@@ -103,13 +103,17 @@ void Path1(Player& m_Player)
 		break;
 	}
 
-	cout << "Your scores are:\nG: " << m_Player.g << endl;
+	//----------------------------------------------------------------------
+
+	//Checks:
+
+	/*cout << "Your scores are:\nG: " << m_Player.g << endl;
 	cout << "E: " << m_Player.e << endl;
 	cout << "L: " << m_Player.l << endl;
 	cout << "C: " << m_Player.c << endl;
 
-	cout << "End." << endl;
+	cout << "End." << endl;*/
 
-
+	//---------------------------------------------------------------------
 
 }

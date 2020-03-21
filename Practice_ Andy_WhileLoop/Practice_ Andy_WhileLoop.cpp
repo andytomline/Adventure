@@ -139,6 +139,7 @@ int main()
         m_Player.power = m_Druid.power;
         m_Player.mana = m_Druid.mana;
         m_Player.wealth = m_Player.wealth + m_Druid.wealth; //Players start with 3 wealth, so this is added to the CLASS
+        m_Player.Druid == 1;
 
         Sleep(2000);
 
@@ -193,6 +194,7 @@ int main()
         m_Player.power = m_Warrior.power;
         m_Player.mana = m_Warrior.mana;
         m_Player.wealth = m_Player.wealth + m_Warrior.wealth;
+        m_Player.Warrior == 1;
 
         Sleep(2000);
 
@@ -230,7 +232,8 @@ int main()
         m_Player.power = m_Wizard.power;
         m_Player.mana = m_Wizard.mana;
         m_Player.wealth = m_Player.wealth + m_Wizard.wealth;
-
+        m_Player.Wizard == 1;
+       
         Sleep(2000);
 
         cout << "Please pay attention to the following lines, as they will show you your stats.\nThese can be changed over time, and will be given to you again at that time.\n\n\n\n" << endl;

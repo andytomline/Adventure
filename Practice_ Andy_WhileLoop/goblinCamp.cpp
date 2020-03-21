@@ -26,6 +26,8 @@ void goblinCamp(Player& m_Player)
 			if (m_Player.mana >= 1)
 			{
 				cout << "You launch a fiery ball from your fingertips, destroying a large section of the encampment. Goblins squeal away, and you have time to react again." << endl;
+				m_Player.mana--;
+				cout << "Your mana is now:" << m_Player.mana << "." << endl;
 			}
 			else
 			{
@@ -144,7 +146,8 @@ void goblinCamp(Player& m_Player)
 			cout << "You try to talk to the sword sticking out of the door.\nIt seems to go well at first..." << endl;
 			if (m_Player.goblinRace == 1)
 			{
-				cout << "Being a Goblin, they seems understand your plea. They let you in, and you are free to look around." << endl;
+				cout << "Being a Goblin, they seems understand your plea. One Goblin, called Bork, gives you a book for being so polite. Bork lets you in, and you are free to look around." << endl;
+				m_Player.Bork == 1;
 			}
 			else
 			{
@@ -154,8 +157,28 @@ void goblinCamp(Player& m_Player)
 
 
 		}
-
+		default:
+		{
+			cout << "What on earth was that? You dick. You utter dick. You dick Utter. You Cow brain's dick udder. Go away." << endl;
+			exit(10000);
+		}
 
 	}
+
+	cout << "You have survived so far, which is good. But now you are inside a Goblin camp! Ahh!\nThankfully, other than those posted on the gate, they seem to be out.\nYou look around, but come up short.\nHowever you do find a clue, stating that the Goblin's too treasure to a lovely dragon in the Cave of Avamix..." << endl;
+	cout << "Guess you'll have to go there next." << endl;
+	cout << "But before you head off, you take a little break and rest up." << endl;
+	if (m_Player.Current_HP < m_Player.Max_HP) //Players who are less than maximum health heal 1 health
+	{
+		++m_Player.Current_HP;
+		cout << "Your health is now: " << m_Player.Current_HP << "." << endl;
+	}
+	m_Player.mana++;
+	cout << "Your mana is now: " << m_Player.mana << "." << endl;
+
+	//Add in check to see what class the player is and adjust stats as needed 
+
+
+	
 
 }
