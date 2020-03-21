@@ -16,6 +16,7 @@ public:
 	int e;
 	int l;
 	int c;
+	bool goblinRace; //Yes = 1
 
 	Player() 
 	{
@@ -29,12 +30,11 @@ public:
 		e = 1;
 		l = 1;
 		c = 1;
+		goblinRace = 0;
 
 	}
 	
 };
-
-//Player m_Player;
 
 
 #endif PLAYER_H

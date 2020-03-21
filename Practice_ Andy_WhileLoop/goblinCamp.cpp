@@ -71,7 +71,7 @@ void goblinCamp(Player& m_Player)
 	cout << "1. When in doubt, attack the incoming Goblins with your sword.\n2. You think that you may be able to scare the others off. Attack the Goblins with a minor spell.\n3. No time to think! Attack the Goblins with a powerful spell.\n4. Peace is always an option. Try to reason with the Goblins." << endl;
 	int Choice4;
 	cin >> Choice4;
-
+	
 	switch (Choice4)
 	{
 		case 1:
@@ -111,11 +111,49 @@ void goblinCamp(Player& m_Player)
 					exit(2000);
 				}
 			}
-	}
+
+		}
+		case 2:
+		{
+			if (m_Player.mana >= 1)
+			{
+				
+				cout << "You time a spell perfectly, launching a little ball of ice.\nIt hits the closest Goblin, killing it, and scaring the others off.\nYou enter the camp..." << endl;
+				m_Player.mana--;
+				cout << "You now have " << m_Player.mana << " remaining." << endl;
+
+			}
+			else
+			{
+				cout << "You raise your hands, and puff. Nothing. \nLooks like you ran out of mana!\nAs you consider how badly that went, you notice a sword in your face. You're dead." << endl;
+				exit(5000);
+			}
+		}
+		case 3:
+		{
+			if (m_Player.mana >= 2)
+			{
+				cout << "You hurl a ball of flames, it takes a lot of energy but the Goblins all fry in the process. \nNow you can casually stroll into the camp and look around!" << endl;
+				m_Player.mana--;
+				m_Player.mana--;
+				cout << "Your mana is now: " << m_Player.mana << "." << endl;
+			}
+		}
+		case 4:
+		{
+			cout << "You try to talk to the sword sticking out of the door.\nIt seems to go well at first..." << endl;
+			if (m_Player.goblinRace = 1)
+			{
+				cout << "Being a Goblin, they seems understand your plea. They let you in, and you are free to look around." << endl;
+			}
+			else
+			{
+				cout << "You attempt to reason with them, but you forget that Goblins have only two languages.\nYou don't know one, but the other stabs you in the face. Oops." << endl;
+				exit(8000);
+			}
 
 
-
-
+		}
 
 
 	}

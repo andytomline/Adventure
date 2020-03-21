@@ -104,6 +104,7 @@ int main()
         m_Player.Max_HP = m_Goblin.health;
         m_Player.Current_HP = m_Player.Max_HP;
         m_Player.charm = m_Goblin.charm;
+        m_Player.goblinRace = 1; //Added in development of goblinCamp to check race again. Used Bool as it is a TRUE/FALSE check
 
         break;
     }
@@ -401,6 +402,7 @@ int main()
 
 	goblinCamp(m_Player);
 
+   
     
     cout << "Back to main." << endl;
 
